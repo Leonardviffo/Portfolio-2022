@@ -1,0 +1,52 @@
+@use 'mixin';
+
+.container-dua {
+    background-color: #3c1053;
+    text-align: center;
+    padding-top: 150px;
+    height: 500px;
+
+    h1 {
+        text-transform: uppercase;
+        color: rgb(255, 255, 255);
+        text-shadow: 5px 0 5px rgba(0, 0, 0, 0.5);
+        margin-bottom: 50px;
+        position: relative;
+    }
+
+    h1::after {
+        content: '';
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100px;
+        height: 3px;
+        position: absolute;
+        background-color: white;
+
+    }
+
+    .kumpulan-project {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+
+        div {
+
+                p {
+                    color: white;
+                    margin-top: 50px
+                }
+            
+
+            .Project-satu {@include mixin.kotak-project;}
+
+            .Project-dua {@include mixin.kotak-project;}
+
+            .Project-tiga {@include mixin.kotak-project;}
+
+            
+        }
+    }
+}
